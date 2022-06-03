@@ -5,10 +5,10 @@
 // Your solution should also include some type safety.
 // If a value that isn't an object or array is passed as the first argument, it should just return whatever was passed in.
 
-function solution (data, replace) {
+function solution(data, replace) {
   for (let key in data) {
-    if (data[key] === "dynamic") data[key] = replace
-    if (typeof data[key] === "object")  solution(data[key], replace)
+    if (data[key] === "dynamic") data[key] = replace;
+    if (typeof data[key] === "object") solution(data[key], replace);
   }
   return data
 }
